@@ -1,0 +1,2087 @@
+{
+  "fetched_at": "2026-10-26T21:31:56.941Z",
+  "source": "https://rhoapi-sandbox.rho.co/api/v1",
+  "accounts": [
+    {
+      "account_name": "Cash (Checking)",
+      "account_number_last_4": "9508",
+      "account_type": "checking",
+      "balance": {
+        "amount": 876138,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000002",
+      "routing_number_last_4": "0089"
+    },
+    {
+      "account_name": "Cash (Checking)",
+      "account_number_last_4": "4609",
+      "account_type": "checking",
+      "balance": {
+        "amount": 8711697,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000003",
+      "routing_number_last_4": "0089"
+    },
+    {
+      "account_name": "Credit Account",
+      "account_type": "credit",
+      "balance": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000007"
+    },
+    {
+      "account_name": "Credit Account",
+      "account_type": "credit",
+      "balance": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000008"
+    },
+    {
+      "account_name": "Credit Account",
+      "account_type": "credit",
+      "balance": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000009"
+    },
+    {
+      "account_name": "Credit Account",
+      "account_type": "credit",
+      "balance": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000010"
+    },
+    {
+      "account_name": "Inventory Checking",
+      "account_number_last_4": "3608",
+      "account_type": "checking",
+      "balance": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000005",
+      "routing_number_last_4": "0089"
+    },
+    {
+      "account_name": "Primary Checking",
+      "account_number_last_4": "5702",
+      "account_type": "checking",
+      "balance": {
+        "amount": 811970,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000006",
+      "routing_number_last_4": "0089"
+    },
+    {
+      "account_name": "Reserve Checking",
+      "account_number_last_4": "0106",
+      "account_type": "checking",
+      "balance": {
+        "amount": 1046,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000001",
+      "routing_number_last_4": "0089"
+    },
+    {
+      "account_name": "Rewards",
+      "account_type": "rewards",
+      "balance": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000011"
+    },
+    {
+      "account_name": "Rewards",
+      "account_type": "rewards",
+      "balance": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000012"
+    },
+    {
+      "account_name": "Savings",
+      "account_number_last_4": "3214",
+      "account_type": "savings",
+      "balance": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000013",
+      "routing_number_last_4": "0089"
+    },
+    {
+      "account_name": "Savings",
+      "account_number_last_4": "2513",
+      "account_type": "savings",
+      "balance": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000014",
+      "routing_number_last_4": "0089"
+    },
+    {
+      "account_name": "Treasury Checking",
+      "account_number_last_4": "7301",
+      "account_type": "checking",
+      "balance": {
+        "amount": 15460929,
+        "currency": "USD"
+      },
+      "id": "30000000-0000-4000-8000-000000000004",
+      "routing_number_last_4": "0089"
+    }
+  ],
+  "bills": [
+    {
+      "amount": {
+        "amount": 14400,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000001"
+      },
+      "created_at": "2026-08-10T16:00:00Z",
+      "due_date": "2026-09-09",
+      "id": "80000000-0000-4000-8000-000000000018",
+      "invoice_date": "2026-08-10",
+      "invoice_number": "BILL-2026-0023",
+      "lines": [],
+      "status": "other",
+      "updated_at": "2026-08-11T16:00:00Z"
+    },
+    {
+      "amount": {
+        "amount": 61200,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000003"
+      },
+      "created_at": "2026-08-05T10:20:00Z",
+      "due_date": "2026-09-04",
+      "id": "80000000-0000-4000-8000-000000000017",
+      "invoice_date": "2026-08-05",
+      "invoice_number": "BILL-2026-0022",
+      "lines": [
+        {
+          "amount": {
+            "amount": 61200,
+            "currency": "USD"
+          },
+          "created_at": "2026-08-05T10:20:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000003",
+          "description": "Equipment rental",
+          "id": "81000000-0000-4000-8000-000000000011",
+          "index": 1,
+          "updated_at": "2026-08-05T10:20:00Z"
+        }
+      ],
+      "memo": "Upstream reports a state the API does not name yet.",
+      "status": "other",
+      "updated_at": "2026-08-06T10:20:00Z"
+    },
+    {
+      "created_at": "2026-08-03T08:15:00Z",
+      "id": "80000000-0000-4000-8000-000000000016",
+      "lines": [],
+      "memo": "Started from a forwarded email, nothing filled in yet.",
+      "status": "draft",
+      "updated_at": "2026-08-03T08:15:00Z"
+    },
+    {
+      "amount": {
+        "amount": 24750,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000006"
+      },
+      "created_at": "2026-07-30T12:00:00Z",
+      "due_date": "2026-08-29",
+      "id": "80000000-0000-4000-8000-000000000015",
+      "invoice_date": "2026-07-30",
+      "invoice_number": "BILL-2026-0021",
+      "lines": [],
+      "status": "draft",
+      "updated_at": "2026-07-30T12:00:00Z"
+    },
+    {
+      "amount": {
+        "amount": 158000,
+        "currency": "USD"
+      },
+      "created_at": "2026-07-27T09:40:00Z",
+      "due_date": "2026-08-26",
+      "id": "80000000-0000-4000-8000-000000000014",
+      "invoice_date": "2026-07-27",
+      "invoice_number": "BILL-2026-0020",
+      "lines": [],
+      "memo": "No payee on the bill yet.",
+      "status": "missing_payment_details",
+      "updated_at": "2026-07-28T09:40:00Z"
+    },
+    {
+      "amount": {
+        "amount": 33400,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000005"
+      },
+      "created_at": "2026-07-23T15:10:00Z",
+      "due_date": "2026-08-22",
+      "id": "80000000-0000-4000-8000-000000000013",
+      "invoice_date": "2026-07-23",
+      "invoice_number": "BILL-2026-0019",
+      "lines": [
+        {
+          "amount": {
+            "amount": 33400,
+            "currency": "USD"
+          },
+          "created_at": "2026-07-23T15:10:00Z",
+          "description": "Translation services",
+          "id": "81000000-0000-4000-8000-000000000010",
+          "index": 1,
+          "updated_at": "2026-07-23T15:10:00Z"
+        }
+      ],
+      "memo": "Waiting on the vendor's bank details.",
+      "status": "missing_payment_details",
+      "updated_at": "2026-07-27T10:30:00Z"
+    },
+    {
+      "amount": {
+        "amount": 9950,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000004"
+      },
+      "created_at": "2026-07-20T08:00:00Z",
+      "due_date": "2026-08-20",
+      "id": "80000000-0000-4000-8000-000000000012",
+      "invoice_date": "2026-07-20",
+      "invoice_number": "BILL-2026-0018",
+      "lines": [],
+      "memo": "Needs a second approver over $5,000.",
+      "status": "awaiting_approval",
+      "updated_at": "2026-07-26T14:00:00Z"
+    },
+    {
+      "amount": {
+        "amount": 76500,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000002"
+      },
+      "created_at": "2026-07-16T11:30:00Z",
+      "due_date": "2026-08-18",
+      "id": "80000000-0000-4000-8000-000000000011",
+      "invoice_date": "2026-07-16",
+      "invoice_number": "BILL-2026-0017",
+      "lines": [
+        {
+          "amount": {
+            "amount": 76500,
+            "currency": "USD"
+          },
+          "created_at": "2026-07-16T11:30:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000004",
+          "description": "Media buy - August",
+          "id": "81000000-0000-4000-8000-00000000000f",
+          "index": 1,
+          "updated_at": "2026-07-16T11:30:00Z"
+        }
+      ],
+      "status": "awaiting_approval",
+      "updated_at": "2026-07-25T09:12:00Z"
+    },
+    {
+      "amount": {
+        "amount": 3200,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000001"
+      },
+      "created_at": "2026-07-13T17:45:00Z",
+      "due_date": "2026-08-14",
+      "id": "80000000-0000-4000-8000-000000000010",
+      "invoice_date": "2026-07-13",
+      "invoice_number": "BILL-2026-0016",
+      "lines": [],
+      "memo": "Approved by finance.",
+      "status": "ready_for_payment",
+      "updated_at": "2026-07-24T10:05:00Z"
+    },
+    {
+      "amount": {
+        "amount": 48600,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000006"
+      },
+      "created_at": "2026-07-09T13:00:00Z",
+      "due_date": "2026-08-12",
+      "id": "80000000-0000-4000-8000-00000000000f",
+      "invoice_date": "2026-07-09",
+      "invoice_number": "BILL-2026-0015",
+      "lines": [
+        {
+          "amount": {
+            "amount": 48600,
+            "currency": "USD"
+          },
+          "created_at": "2026-07-09T13:00:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000002",
+          "description": "Legal fees - Q3",
+          "id": "81000000-0000-4000-8000-00000000000e",
+          "index": 1,
+          "updated_at": "2026-07-09T13:00:00Z"
+        }
+      ],
+      "status": "ready_for_payment",
+      "updated_at": "2026-07-23T08:20:00Z"
+    },
+    {
+      "amount": {
+        "amount": 215000,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000003"
+      },
+      "created_at": "2026-07-06T09:00:00Z",
+      "due_date": "2026-08-10",
+      "file_id": "50000000-0000-4000-8000-000000000037",
+      "id": "80000000-0000-4000-8000-00000000000e",
+      "invoice_date": "2026-07-06",
+      "invoice_number": "BILL-2026-0014",
+      "lines": [
+        {
+          "amount": {
+            "amount": 150000,
+            "currency": "USD"
+          },
+          "created_at": "2026-07-06T09:00:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000005",
+          "description": "Fabrication - phase 1",
+          "id": "81000000-0000-4000-8000-00000000000b",
+          "index": 1,
+          "updated_at": "2026-07-06T09:00:00Z"
+        },
+        {
+          "amount": {
+            "amount": 45000,
+            "currency": "USD"
+          },
+          "created_at": "2026-07-06T09:00:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000005",
+          "description": "Fabrication - phase 2",
+          "id": "81000000-0000-4000-8000-00000000000c",
+          "index": 2,
+          "updated_at": "2026-07-06T09:00:00Z"
+        },
+        {
+          "amount": {
+            "amount": 20000,
+            "currency": "USD"
+          },
+          "created_at": "2026-07-06T09:00:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000005",
+          "description": "Freight",
+          "id": "81000000-0000-4000-8000-00000000000d",
+          "index": 3,
+          "updated_at": "2026-07-22T16:40:00Z"
+        }
+      ],
+      "memo": "Scheduled upstream before a payment date was attached.",
+      "status": "scheduled",
+      "updated_at": "2026-07-22T16:40:00Z"
+    },
+    {
+      "amount": {
+        "amount": 7500,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000005"
+      },
+      "created_at": "2026-07-02T10:11:00Z",
+      "due_date": "2026-08-05",
+      "id": "80000000-0000-4000-8000-00000000000d",
+      "invoice_date": "2026-07-02",
+      "invoice_number": "BILL-2026-0013",
+      "lines": [],
+      "payment_date": "2026-08-05",
+      "status": "scheduled",
+      "updated_at": "2026-07-21T11:00:00Z"
+    },
+    {
+      "amount": {
+        "amount": 120050,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000002"
+      },
+      "created_at": "2026-06-24T14:32:07Z",
+      "due_date": "2026-08-01",
+      "file_id": "50000000-0000-4000-8000-000000000036",
+      "id": "80000000-0000-4000-8000-00000000000c",
+      "invoice_date": "2026-06-24",
+      "invoice_number": "BILL-2026-0012",
+      "lines": [
+        {
+          "amount": {
+            "amount": 100000,
+            "currency": "USD"
+          },
+          "created_at": "2026-06-24T14:32:07Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000001",
+          "description": "Consulting Services - July",
+          "id": "81000000-0000-4000-8000-000000000009",
+          "index": 1,
+          "updated_at": "2026-07-20T09:15:42Z"
+        },
+        {
+          "amount": {
+            "amount": 20050,
+            "currency": "USD"
+          },
+          "created_at": "2026-06-24T14:32:07Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000001",
+          "description": "Software licence fee",
+          "id": "81000000-0000-4000-8000-00000000000a",
+          "index": 2,
+          "updated_at": "2026-07-20T09:15:42Z"
+        }
+      ],
+      "memo": "Net 30 terms apply.",
+      "payment_date": "2026-08-01",
+      "status": "scheduled",
+      "updated_at": "2026-07-20T09:15:42Z"
+    },
+    {
+      "amount": {
+        "amount": 29900,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000004"
+      },
+      "created_at": "2026-05-11T14:22:00Z",
+      "due_date": "2026-06-10",
+      "id": "80000000-0000-4000-8000-00000000000b",
+      "invoice_date": "2026-05-11",
+      "invoice_number": "BILL-2026-0011",
+      "lines": [],
+      "memo": "Replaces BILL-2026-0004.",
+      "payment_date": "2026-06-10",
+      "status": "pending_payment",
+      "updated_at": "2026-06-10T09:00:00Z"
+    },
+    {
+      "amount": {
+        "amount": 64800,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000001"
+      },
+      "created_at": "2026-05-04T08:05:00Z",
+      "due_date": "2026-06-03",
+      "file_id": "50000000-0000-4000-8000-000000000035",
+      "id": "80000000-0000-4000-8000-00000000000a",
+      "invoice_date": "2026-05-04",
+      "invoice_number": "BILL-2026-0010",
+      "lines": [
+        {
+          "amount": {
+            "amount": 48000,
+            "currency": "USD"
+          },
+          "created_at": "2026-05-04T08:05:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000004",
+          "description": "Recruitment fee",
+          "id": "81000000-0000-4000-8000-000000000007",
+          "index": 1,
+          "updated_at": "2026-05-04T08:05:00Z"
+        },
+        {
+          "amount": {
+            "amount": 16800,
+            "currency": "USD"
+          },
+          "created_at": "2026-05-04T08:05:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000004",
+          "description": "Background checks",
+          "id": "81000000-0000-4000-8000-000000000008",
+          "index": 2,
+          "updated_at": "2026-05-06T09:30:00Z"
+        }
+      ],
+      "payment_date": "2026-06-03",
+      "status": "pending_payment",
+      "updated_at": "2026-06-03T09:00:00Z"
+    },
+    {
+      "amount": {
+        "amount": 12300,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000005"
+      },
+      "created_at": "2026-04-06T15:45:00Z",
+      "due_date": "2026-05-06",
+      "id": "80000000-0000-4000-8000-000000000007",
+      "invoice_date": "2026-04-06",
+      "invoice_number": "BILL-2026-0007",
+      "lines": [],
+      "payment_date": "2026-05-06",
+      "status": "failed_payment",
+      "updated_at": "2026-05-07T06:30:00Z"
+    },
+    {
+      "amount": {
+        "amount": 87400,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000002"
+      },
+      "created_at": "2026-04-01T10:00:00Z",
+      "due_date": "2026-05-01",
+      "file_id": "50000000-0000-4000-8000-000000000033",
+      "id": "80000000-0000-4000-8000-000000000006",
+      "invoice_date": "2026-04-01",
+      "invoice_number": "BILL-2026-0006",
+      "lines": [
+        {
+          "amount": {
+            "amount": 60000,
+            "currency": "USD"
+          },
+          "created_at": "2026-04-01T10:00:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000003",
+          "description": "Managed hosting - March",
+          "id": "81000000-0000-4000-8000-000000000004",
+          "index": 1,
+          "updated_at": "2026-04-01T10:00:00Z"
+        },
+        {
+          "amount": {
+            "amount": 27400,
+            "currency": "USD"
+          },
+          "created_at": "2026-04-01T10:00:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000003",
+          "description": "Overage charges",
+          "id": "81000000-0000-4000-8000-000000000005",
+          "index": 2,
+          "updated_at": "2026-04-01T10:00:00Z"
+        }
+      ],
+      "memo": "Bank returned the payment - vendor to confirm account details.",
+      "payment_date": "2026-05-01",
+      "status": "failed_payment",
+      "updated_at": "2026-05-02T04:12:00Z"
+    },
+    {
+      "amount": {
+        "amount": 18750,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000004"
+      },
+      "created_at": "2026-03-09T13:31:00Z",
+      "due_date": "2026-04-08",
+      "file_id": "50000000-0000-4000-8000-000000000032",
+      "id": "80000000-0000-4000-8000-000000000005",
+      "invoice_date": "2026-03-09",
+      "invoice_number": "BILL-2026-0005",
+      "lines": [],
+      "status": "archived",
+      "updated_at": "2026-03-11T09:05:00Z"
+    },
+    {
+      "amount": {
+        "amount": 42000,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000001"
+      },
+      "created_at": "2026-03-04T16:20:00Z",
+      "due_date": "2026-04-03",
+      "id": "80000000-0000-4000-8000-000000000004",
+      "invoice_date": "2026-03-04",
+      "invoice_number": "BILL-2026-0004",
+      "lines": [],
+      "memo": "Superseded by BILL-2026-0011.",
+      "status": "archived",
+      "updated_at": "2026-03-06T10:00:00Z"
+    },
+    {
+      "amount": {
+        "amount": 105000,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000001"
+      },
+      "created_at": "2026-03-02T09:14:00Z",
+      "due_date": "2026-03-25",
+      "file_id": "50000000-0000-4000-8000-000000000030",
+      "id": "80000000-0000-4000-8000-000000000001",
+      "invoice_date": "2026-03-02",
+      "invoice_number": "BILL-2026-0001",
+      "lines": [
+        {
+          "amount": {
+            "amount": 90000,
+            "currency": "USD"
+          },
+          "created_at": "2026-03-02T09:14:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000001",
+          "description": "Consulting Services - February",
+          "id": "81000000-0000-4000-8000-000000000001",
+          "index": 1,
+          "updated_at": "2026-03-02T09:14:00Z"
+        },
+        {
+          "amount": {
+            "amount": 15000,
+            "currency": "USD"
+          },
+          "created_at": "2026-03-02T09:14:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000001",
+          "description": "Travel reimbursement",
+          "id": "81000000-0000-4000-8000-000000000002",
+          "index": 2,
+          "updated_at": "2026-03-04T11:00:00Z"
+        }
+      ],
+      "memo": "Net 30 terms apply.",
+      "payment_date": "2026-03-25",
+      "status": "paid",
+      "transaction": {
+        "id": "019d2634-7fa0-7000-8000-000000000026"
+      },
+      "updated_at": "2026-03-25T18:14:28Z"
+    },
+    {
+      "amount": {
+        "amount": 339100,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000002"
+      },
+      "created_at": "2026-02-23T11:02:00Z",
+      "due_date": "2026-03-23",
+      "file_id": "50000000-0000-4000-8000-000000000031",
+      "id": "80000000-0000-4000-8000-000000000002",
+      "invoice_date": "2026-02-23",
+      "invoice_number": "BILL-2026-0002",
+      "lines": [
+        {
+          "amount": {
+            "amount": 339100,
+            "currency": "USD"
+          },
+          "created_at": "2026-02-23T11:02:00Z",
+          "created_by_user_id": "40000000-0000-4000-8000-000000000002",
+          "description": "Office fit-out - final instalment",
+          "id": "81000000-0000-4000-8000-000000000003",
+          "index": 1,
+          "updated_at": "2026-02-23T11:02:00Z"
+        }
+      ],
+      "payment_date": "2026-03-23",
+      "status": "paid",
+      "transaction": {
+        "id": "019d1987-7140-7000-8000-000000000028"
+      },
+      "updated_at": "2026-03-23T07:10:00Z"
+    },
+    {
+      "amount": {
+        "amount": 56250,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000003"
+      },
+      "created_at": "2026-02-15T08:45:00Z",
+      "due_date": "2026-03-15",
+      "id": "80000000-0000-4000-8000-000000000003",
+      "invoice_date": "2026-02-15",
+      "invoice_number": "BILL-2026-0003",
+      "lines": [],
+      "memo": "Quarterly retainer.",
+      "payment_date": "2026-03-15",
+      "status": "paid",
+      "transaction": {
+        "id": "019cef0b-f828-7000-8000-000000000029"
+      },
+      "updated_at": "2026-03-15T01:11:05Z"
+    },
+    {
+      "amount": {
+        "amount": 180000,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000003"
+      },
+      "created_at": "2025-09-22T12:00:00Z",
+      "due_date": "2025-10-22",
+      "file_id": "50000000-0000-4000-8000-000000000034",
+      "id": "80000000-0000-4000-8000-000000000008",
+      "invoice_date": "2025-09-22",
+      "invoice_number": "BILL-2026-0008",
+      "lines": [
+        {
+          "amount": {
+            "amount": 180000,
+            "currency": "USD"
+          },
+          "created_at": "2025-09-22T12:00:00Z",
+          "description": "Annual platform licence",
+          "id": "81000000-0000-4000-8000-000000000006",
+          "index": 1,
+          "updated_at": "2025-09-22T12:00:00Z"
+        }
+      ],
+      "memo": "Annual platform licence.",
+      "payment_date": "2025-10-22",
+      "status": "paid",
+      "transaction": {
+        "id": "019a09ad-afa8-7000-8000-000000000032"
+      },
+      "updated_at": "2025-10-22T02:09:29Z"
+    },
+    {
+      "amount": {
+        "amount": 92500,
+        "currency": "USD"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000006"
+      },
+      "created_at": "2025-09-15T09:30:00Z",
+      "due_date": "2025-10-15",
+      "id": "80000000-0000-4000-8000-000000000009",
+      "invoice_date": "2025-09-15",
+      "invoice_number": "BILL-2026-0009",
+      "lines": [],
+      "payment_date": "2025-10-15",
+      "status": "paid",
+      "transaction": {
+        "id": "0199e9d6-4208-7000-8000-000000000033"
+      },
+      "updated_at": "2025-10-15T21:45:57Z"
+    }
+  ],
+  "counterparties": [
+    {
+      "address": {
+        "city": "New York",
+        "country_code": "US",
+        "postal_code": "10022",
+        "street": "410 Madison Ave",
+        "subdivision": "NY"
+      },
+      "created_at": "2026-06-04T09:18:33Z",
+      "email": "ap@sterlingcooper.example",
+      "id": "90000000-0000-4000-8000-000000000007",
+      "is_business": true,
+      "legal_name": "Sterling Cooper Supply Co",
+      "memo": "Archived after the contract ended",
+      "nickname": "Sterling",
+      "payment_methods": [
+        {
+          "bank_name": "Example Bank",
+          "country_code": "US",
+          "currency": "USD",
+          "description": "Checking ending in 5511",
+          "id": "91000000-0000-4000-8000-000000000007",
+          "is_default": true,
+          "type": "ach"
+        }
+      ],
+      "registration_country_code": "US",
+      "status": "archived",
+      "updated_at": "2026-07-29T15:41:10Z",
+      "w9_status": "complete"
+    },
+    {
+      "created_at": "2026-05-21T17:55:02Z",
+      "email": "accounts@vandelay.example",
+      "id": "90000000-0000-4000-8000-000000000006",
+      "is_business": false,
+      "legal_name": "Vandelay Industries",
+      "memo": "Awaiting business type and a default payment method",
+      "nickname": "Vandelay",
+      "payment_methods": [
+        {
+          "country_code": "US",
+          "currency": "USD",
+          "description": "Single-use virtual card",
+          "id": null,
+          "is_default": false,
+          "type": "single_use_card"
+        }
+      ],
+      "status": "incomplete",
+      "updated_at": "2026-06-02T11:07:26Z"
+    },
+    {
+      "created_at": "2026-04-08T13:12:44Z",
+      "id": "90000000-0000-4000-8000-000000000005",
+      "is_business": true,
+      "legal_name": "Initech Consulting LLC",
+      "memo": "Invited to complete their own payment details",
+      "payment_methods": [],
+      "status": "invited",
+      "updated_at": "2026-04-08T13:12:44Z"
+    },
+    {
+      "address": {
+        "city": "San Francisco",
+        "country_code": "US",
+        "postal_code": "94115",
+        "second_line": "Apt 3B",
+        "street": "2100 Fillmore St",
+        "subdivision": "CA"
+      },
+      "created_at": "2026-03-16T19:40:11Z",
+      "email": "jordan.reyes@example.com",
+      "id": "90000000-0000-4000-8000-000000000004",
+      "is_business": false,
+      "legal_name": "Jordan Reyes",
+      "memo": "Design contractor - monthly retainer",
+      "payment_methods": [
+        {
+          "bank_name": "Example Credit Union",
+          "country_code": "US",
+          "currency": "USD",
+          "description": "Checking ending in 6390",
+          "id": "91000000-0000-4000-8000-000000000005",
+          "is_default": true,
+          "type": "ach"
+        },
+        {
+          "country_code": "US",
+          "currency": "USD",
+          "description": "Vendor card ending in 4021",
+          "id": "91000000-0000-4000-8000-000000000006",
+          "is_default": false,
+          "type": "vendor_card"
+        }
+      ],
+      "phone_number": "+14155550171",
+      "registration_country_code": "US",
+      "status": "active",
+      "updated_at": "2026-07-18T07:29:58Z",
+      "w9_status": "sent_pending"
+    },
+    {
+      "address": {
+        "city": "Berlin",
+        "country_code": "DE",
+        "postal_code": "10117",
+        "street": "Friedrichstrasse 12",
+        "subdivision": "BE"
+      },
+      "created_at": "2026-02-27T08:21:55Z",
+      "email": "kreditoren@globex.example",
+      "id": "90000000-0000-4000-8000-000000000003",
+      "is_business": true,
+      "legal_name": "Globex International GmbH",
+      "memo": "Contract manufacturing - invoices in EUR",
+      "nickname": "Globex",
+      "payment_methods": [
+        {
+          "address": {
+            "city": "Berlin",
+            "country_code": "DE",
+            "postal_code": "10117",
+            "street": "Friedrichstrasse 12",
+            "subdivision": "BE"
+          },
+          "bank_name": "Deutsche Beispielbank",
+          "country_code": "DE",
+          "currency": "EUR",
+          "description": "EUR beneficiary account ending in 4407",
+          "id": "91000000-0000-4000-8000-000000000004",
+          "is_default": true,
+          "type": "international"
+        },
+        {
+          "country_code": "US",
+          "currency": "USD",
+          "description": "Single-use virtual card",
+          "id": null,
+          "is_default": false,
+          "type": "single_use_card"
+        }
+      ],
+      "phone_number": "+493055512480",
+      "registration_country_code": "DE",
+      "status": "active",
+      "updated_at": "2026-07-11T12:02:37Z"
+    },
+    {
+      "address": {
+        "city": "Chicago",
+        "country_code": "US",
+        "postal_code": "60601",
+        "street": "88 Harbor Point Dr",
+        "subdivision": "IL"
+      },
+      "created_at": "2026-02-03T10:04:19Z",
+      "email": "billing@northwindlogistics.example",
+      "id": "90000000-0000-4000-8000-000000000002",
+      "is_business": true,
+      "legal_name": "Northwind Logistics Inc",
+      "memo": "Freight and last-mile delivery",
+      "nickname": "Northwind",
+      "payment_methods": [
+        {
+          "address": {
+            "city": "Chicago",
+            "country_code": "US",
+            "postal_code": "60601",
+            "street": "88 Harbor Point Dr",
+            "subdivision": "IL"
+          },
+          "bank_name": "First Harbor Bank",
+          "country_code": "US",
+          "currency": "USD",
+          "description": "Operating account ending in 8821",
+          "id": "91000000-0000-4000-8000-000000000002",
+          "is_default": true,
+          "type": "wire"
+        },
+        {
+          "address": {
+            "city": "Chicago",
+            "country_code": "US",
+            "postal_code": "60601",
+            "second_line": "Attn: Accounts Receivable",
+            "street": "88 Harbor Point Dr",
+            "subdivision": "IL"
+          },
+          "country_code": "US",
+          "currency": "USD",
+          "description": "Mailed check",
+          "id": "91000000-0000-4000-8000-000000000003",
+          "is_default": false,
+          "type": "check"
+        }
+      ],
+      "phone_number": "+13125550188",
+      "registration_country_code": "US",
+      "status": "active",
+      "updated_at": "2026-06-30T16:48:03Z",
+      "w9_status": "complete_externally"
+    },
+    {
+      "address": {
+        "city": "New York",
+        "country_code": "US",
+        "postal_code": "10001",
+        "second_line": "Suite 400",
+        "street": "123 Market St",
+        "subdivision": "NY"
+      },
+      "created_at": "2026-01-12T14:32:07Z",
+      "email": "ap@acmesupplies.example",
+      "id": "90000000-0000-4000-8000-000000000001",
+      "is_business": true,
+      "legal_name": "Acme Supplies LLC",
+      "memo": "Preferred office supplier",
+      "nickname": "Acme",
+      "payment_methods": [
+        {
+          "bank_name": "Example Bank",
+          "country_code": "US",
+          "currency": "USD",
+          "description": "Checking ending in 1234",
+          "id": "91000000-0000-4000-8000-000000000001",
+          "is_default": true,
+          "type": "ach"
+        },
+        {
+          "country_code": "US",
+          "currency": "USD",
+          "description": "Single-use virtual card",
+          "id": null,
+          "is_default": false,
+          "type": "single_use_card"
+        }
+      ],
+      "phone_number": "+12125550123",
+      "registration_country_code": "US",
+      "status": "active",
+      "updated_at": "2026-07-20T09:15:42Z",
+      "w9_status": "complete"
+    }
+  ],
+  "scheduled_transactions": [
+    {
+      "amount": {
+        "amount": 120050,
+        "currency": "USD"
+      },
+      "bill": {
+        "id": "80000000-0000-4000-8000-00000000000c"
+      },
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000002",
+        "name": "Northwind Logistics Inc"
+      },
+      "id": "60000000-0000-4000-8000-000000000002",
+      "initiating_user": {
+        "id": "40000000-0000-4000-8000-000000000001"
+      },
+      "payment_type": "domestic_wire",
+      "schedule": {
+        "end_condition": {
+          "end_date": null,
+          "occurrence_count": null,
+          "type": "never"
+        },
+        "failed": false,
+        "frequency": "one_time",
+        "next_release_date": "2026-08-01"
+      },
+      "source_account": {
+        "id": "30000000-0000-4000-8000-000000000004"
+      }
+    },
+    {
+      "amount": {
+        "amount": 450000,
+        "currency": "USD"
+      },
+      "bill": null,
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000001",
+        "name": "Acme Supplies LLC"
+      },
+      "id": "60000000-0000-4000-8000-000000000001",
+      "initiating_user": {
+        "id": "40000000-0000-4000-8000-000000000001"
+      },
+      "payment_type": "ach",
+      "schedule": {
+        "end_condition": {
+          "end_date": null,
+          "occurrence_count": null,
+          "type": "never"
+        },
+        "failed": false,
+        "frequency": "monthly",
+        "next_release_date": "2026-09-01"
+      },
+      "source_account": {
+        "id": "30000000-0000-4000-8000-000000000006"
+      }
+    },
+    {
+      "amount": {
+        "amount": 75000,
+        "currency": "USD"
+      },
+      "bill": null,
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000001",
+        "name": "Acme Supplies LLC"
+      },
+      "id": "60000000-0000-4000-8000-000000000004",
+      "initiating_user": {
+        "id": "40000000-0000-4000-8000-000000000001"
+      },
+      "payment_type": "ach",
+      "schedule": {
+        "end_condition": {
+          "end_date": null,
+          "occurrence_count": 12,
+          "type": "occurrence_count"
+        },
+        "failed": false,
+        "frequency": "monthly",
+        "next_release_date": "2026-10-01"
+      },
+      "source_account": {
+        "id": "30000000-0000-4000-8000-000000000006"
+      }
+    },
+    {
+      "amount": {
+        "amount": 50000,
+        "currency": "USD"
+      },
+      "bill": null,
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000004",
+        "name": "Jordan Reyes"
+      },
+      "id": "60000000-0000-4000-8000-000000000005",
+      "initiating_user": {
+        "id": "40000000-0000-4000-8000-000000000001"
+      },
+      "payment_type": "ach",
+      "schedule": {
+        "end_condition": {
+          "end_date": null,
+          "occurrence_count": null,
+          "type": "never"
+        },
+        "failed": false,
+        "frequency": "one_time",
+        "next_release_date": "2026-11-20"
+      },
+      "source_account": {
+        "id": "30000000-0000-4000-8000-000000000006"
+      }
+    },
+    {
+      "amount": {
+        "amount": 1200000,
+        "currency": "EUR"
+      },
+      "bill": null,
+      "counterparty": {
+        "id": "90000000-0000-4000-8000-000000000003",
+        "name": "Globex International GmbH"
+      },
+      "id": "60000000-0000-4000-8000-000000000003",
+      "initiating_user": {
+        "id": "40000000-0000-4000-8000-000000000001"
+      },
+      "payment_type": "international_wire",
+      "schedule": {
+        "end_condition": {
+          "end_date": "2026-08-01",
+          "occurrence_count": null,
+          "type": "end_date"
+        },
+        "failed": true,
+        "frequency": "weekly",
+        "next_release_date": null
+      },
+      "source_account": {
+        "id": "30000000-0000-4000-8000-000000000004"
+      }
+    }
+  ],
+  "invoices": [
+    {
+      "accounting_sync_status": "synced",
+      "accounting_synced_at": "2026-07-18T09:00:00Z",
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-07-10T09:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "sent",
+          "created_at": "2026-07-10T09:30:00Z",
+          "emails": [
+            "contact@summitanalytics.io"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "card_payment_received",
+          "created_at": "2026-07-18T08:00:00Z",
+          "emails": [],
+          "user_id": null
+        },
+        {
+          "activity_type": "accounting_synced",
+          "created_at": "2026-07-18T09:00:00Z",
+          "emails": [],
+          "user_id": null
+        },
+        {
+          "activity_type": "payment_accounting_synced",
+          "created_at": "2026-07-18T09:00:00Z",
+          "emails": [],
+          "user_id": null
+        }
+      ],
+      "created_at": "2026-07-10T09:00:00Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000005"
+      },
+      "date": "2026-07-10",
+      "discount_rate": 0,
+      "due_date": "2026-08-10",
+      "file_id": "50000000-0000-4000-8000-000000000027",
+      "id": "70000000-0000-4000-8000-000000000010",
+      "invoice_number": "INV-2026-0070",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "Analytics retainer - Q2",
+          "quantity": 1,
+          "tax_rate": null,
+          "total": {
+            "amount": 98000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 98000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": "Q2 analytics retainer.",
+      "payments": [
+        {
+          "external_method": "credit_card",
+          "paid_at": "2026-07-18",
+          "transaction_id": null,
+          "type": "external"
+        }
+      ],
+      "status": "pending_payout",
+      "tax_rate": 0,
+      "total": {
+        "amount": 98000,
+        "currency": "USD"
+      },
+      "updated_at": "2026-07-18T09:00:00Z"
+    },
+    {
+      "accounting_sync_status": "synced",
+      "accounting_synced_at": "2026-07-24T11:00:00Z",
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-07-01T14:32:07Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "sent",
+          "created_at": "2026-07-01T15:00:00Z",
+          "emails": [
+            "info@acmesupplies.com"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "downloaded",
+          "created_at": "2026-07-02T11:20:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "marked_as_paid",
+          "created_at": "2026-07-20T09:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000003"
+        },
+        {
+          "activity_type": "marked_as_unpaid",
+          "created_at": "2026-07-20T09:05:00Z",
+          "emails": [],
+          "user_id": null
+        },
+        {
+          "activity_type": "card_payment_received",
+          "created_at": "2026-07-24T10:00:00Z",
+          "emails": [],
+          "user_id": null
+        },
+        {
+          "activity_type": "accounting_synced",
+          "created_at": "2026-07-24T11:00:00Z",
+          "emails": [],
+          "user_id": null
+        }
+      ],
+      "created_at": "2026-07-01T14:32:07Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000001"
+      },
+      "date": "2026-07-01",
+      "discount_rate": 0,
+      "due_date": "2026-07-31",
+      "file_id": "50000000-0000-4000-8000-000000000021",
+      "id": "70000000-0000-4000-8000-000000000002",
+      "invoice_number": "INV-2026-0066",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "Consulting Services - July",
+          "quantity": 2,
+          "tax_rate": null,
+          "total": {
+            "amount": 100000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 50000,
+            "currency": "USD"
+          }
+        },
+        {
+          "discount_rate": 0,
+          "name": "Platform license",
+          "quantity": 1,
+          "tax_rate": null,
+          "total": {
+            "amount": 20000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 20000,
+            "currency": "USD"
+          }
+        },
+        {
+          "discount_rate": 0,
+          "name": "Implementation hours",
+          "quantity": 2.5,
+          "tax_rate": 0,
+          "total": {
+            "amount": 20000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 8000,
+            "currency": "USD"
+          }
+        },
+        {
+          "discount_rate": 0,
+          "name": "Onboarding fee",
+          "quantity": 1,
+          "tax_rate": 0,
+          "total": {
+            "amount": 6000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 6000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": "Thanks for your business! Net 30 terms apply.",
+      "payments": [
+        {
+          "external_method": "credit_card",
+          "paid_at": "2026-07-24",
+          "transaction_id": null,
+          "type": "external"
+        }
+      ],
+      "status": "pending_payout",
+      "tax_rate": 10,
+      "total": {
+        "amount": 158000,
+        "currency": "USD"
+      },
+      "updated_at": "2026-07-24T16:00:00Z"
+    },
+    {
+      "accounting_sync_status": "not_pushed",
+      "accounting_synced_at": null,
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-07-01T08:30:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "sent",
+          "created_at": "2026-07-01T08:45:00Z",
+          "emails": [
+            "orders@northwind.example"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        }
+      ],
+      "created_at": "2026-07-01T08:30:00Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000003"
+      },
+      "date": "2026-07-01",
+      "discount_rate": 0,
+      "due_date": "2026-08-15",
+      "id": "70000000-0000-4000-8000-000000000006",
+      "invoice_number": "INV-2026-0065",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "Warehouse integration",
+          "quantity": 2,
+          "tax_rate": null,
+          "total": {
+            "amount": 96000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 48000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": null,
+      "payments": [],
+      "status": "unpaid",
+      "tax_rate": 0,
+      "total": {
+        "amount": 96000,
+        "currency": "USD"
+      },
+      "updated_at": "2026-07-01T08:30:00Z"
+    },
+    {
+      "accounting_sync_status": "not_pushed",
+      "accounting_synced_at": null,
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-06-30T10:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "sent",
+          "created_at": "2026-06-30T10:05:00Z",
+          "emails": [
+            "hello@brightleaf.design"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "reminder_sent",
+          "created_at": "2026-07-20T09:00:00Z",
+          "emails": [
+            "hello@brightleaf.design",
+            "finance@brightleaf.design"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000003"
+        }
+      ],
+      "created_at": "2026-06-30T10:00:00Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000002"
+      },
+      "date": "2026-06-30",
+      "discount_rate": 0,
+      "due_date": "2026-07-30",
+      "file_id": "50000000-0000-4000-8000-000000000022",
+      "id": "70000000-0000-4000-8000-000000000003",
+      "invoice_number": "INV-2026-0060",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "Design sprint",
+          "quantity": 1,
+          "tax_rate": null,
+          "total": {
+            "amount": 45000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 45000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": "Design sprint package.",
+      "payments": [],
+      "status": "overdue",
+      "tax_rate": 0,
+      "total": {
+        "amount": 45000,
+        "currency": "USD"
+      },
+      "updated_at": "2026-07-20T09:00:00Z"
+    },
+    {
+      "accounting_sync_status": "not_pushed",
+      "accounting_synced_at": null,
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-06-20T15:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "sent",
+          "created_at": "2026-06-20T15:10:00Z",
+          "emails": [
+            "accounts@orbitmedia.co"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        }
+      ],
+      "created_at": "2026-06-20T15:00:00Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000007"
+      },
+      "date": "2026-06-20",
+      "discount_rate": 0,
+      "due_date": "2026-08-20",
+      "file_id": "50000000-0000-4000-8000-000000000028",
+      "id": "70000000-0000-4000-8000-000000000011",
+      "invoice_number": "INV-2026-0052",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "Campaign production",
+          "quantity": 1,
+          "tax_rate": 6.25,
+          "total": {
+            "amount": 42353,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 42353,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": null,
+      "payments": [],
+      "status": "unpaid",
+      "tax_rate": 6.25,
+      "total": {
+        "amount": 45000,
+        "currency": "USD"
+      },
+      "updated_at": "2026-06-30T17:00:00Z"
+    },
+    {
+      "accounting_sync_status": "synced",
+      "accounting_synced_at": "2026-06-28T16:00:00Z",
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-06-01T11:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "sent",
+          "created_at": "2026-06-01T11:15:00Z",
+          "emails": [
+            "billing@harborlogistics.com"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "marked_as_paid",
+          "created_at": "2026-06-28T16:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000003"
+        },
+        {
+          "activity_type": "accounting_synced",
+          "created_at": "2026-06-28T16:00:00Z",
+          "emails": [],
+          "user_id": null
+        }
+      ],
+      "created_at": "2026-06-01T11:00:00Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000004"
+      },
+      "date": "2026-06-01",
+      "discount_rate": 0,
+      "due_date": "2026-07-01",
+      "file_id": "50000000-0000-4000-8000-000000000026",
+      "id": "70000000-0000-4000-8000-000000000008",
+      "invoice_number": "INV-2026-0050",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "Freight services",
+          "quantity": 3,
+          "tax_rate": null,
+          "total": {
+            "amount": 156750,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 52250,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": "Freight + handling.",
+      "payments": [
+        {
+          "external_method": "other",
+          "paid_at": "2026-06-28",
+          "transaction_id": null,
+          "type": "external"
+        }
+      ],
+      "status": "paid",
+      "tax_rate": 0,
+      "total": {
+        "amount": 156750,
+        "currency": "USD"
+      },
+      "updated_at": "2026-06-28T16:00:00Z"
+    },
+    {
+      "accounting_sync_status": "error",
+      "accounting_synced_at": null,
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-05-15T08:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "sent",
+          "created_at": "2026-05-15T08:30:00Z",
+          "emails": [
+            "orders@northwind.example"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "reminder_sent",
+          "created_at": "2026-06-20T09:00:00Z",
+          "emails": [
+            "orders@northwind.example"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000003"
+        }
+      ],
+      "created_at": "2026-05-15T08:00:00Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000003"
+      },
+      "date": "2026-05-15",
+      "discount_rate": 5,
+      "due_date": "2026-06-15",
+      "file_id": "50000000-0000-4000-8000-000000000024",
+      "id": "70000000-0000-4000-8000-000000000005",
+      "invoice_number": "INV-2026-0045",
+      "line_items": [
+        {
+          "discount_rate": 5,
+          "name": "Inventory sync module",
+          "quantity": 2,
+          "tax_rate": null,
+          "total": {
+            "amount": 76000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 40000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": "Follow up scheduled.",
+      "payments": [],
+      "status": "overdue",
+      "tax_rate": 0,
+      "total": {
+        "amount": 72200,
+        "currency": "USD"
+      },
+      "updated_at": "2026-07-01T08:00:00Z"
+    },
+    {
+      "accounting_sync_status": "object_changed",
+      "accounting_synced_at": "2026-05-18T00:07:03Z",
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-05-10T12:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "sent",
+          "created_at": "2026-05-10T12:10:00Z",
+          "emails": [
+            "orders@northwind.example"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "matched",
+          "created_at": "2026-05-18T00:07:03Z",
+          "emails": [],
+          "user_id": null
+        }
+      ],
+      "created_at": "2026-05-10T12:00:00Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000003"
+      },
+      "date": "2026-05-10",
+      "discount_rate": 0,
+      "due_date": "2026-06-09",
+      "file_id": "50000000-0000-4000-8000-000000000025",
+      "id": "70000000-0000-4000-8000-000000000007",
+      "invoice_number": "INV-2026-0043",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "ERP connector",
+          "quantity": 2,
+          "tax_rate": null,
+          "total": {
+            "amount": 10000000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 5000000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": "Wire received — confirm allocation.",
+      "payments": [
+        {
+          "external_method": null,
+          "paid_at": "2026-05-18",
+          "transaction_id": "019e3868-5858-7000-8000-00000000001a",
+          "type": "received_in_account"
+        }
+      ],
+      "status": "confirm_payment",
+      "tax_rate": 0,
+      "total": {
+        "amount": 10000000,
+        "currency": "USD"
+      },
+      "updated_at": "2026-05-18T00:07:03Z"
+    },
+    {
+      "accounting_sync_status": "skip",
+      "accounting_synced_at": null,
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-05-01T10:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "cancelled",
+          "created_at": "2026-05-10T10:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000002"
+        }
+      ],
+      "created_at": "2026-05-01T10:00:00Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000005"
+      },
+      "date": "2026-05-01",
+      "discount_rate": 0,
+      "due_date": "2026-05-30",
+      "id": "70000000-0000-4000-8000-000000000009",
+      "invoice_number": "INV-2026-0041",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "Discovery workshop",
+          "quantity": 1,
+          "tax_rate": null,
+          "total": {
+            "amount": 22000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 22000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": "Customer cancelled engagement.",
+      "payments": [],
+      "status": "cancelled",
+      "tax_rate": 0,
+      "total": {
+        "amount": 22000,
+        "currency": "USD"
+      },
+      "updated_at": "2026-05-10T10:00:00Z"
+    },
+    {
+      "accounting_sync_status": "synced",
+      "accounting_synced_at": "2026-05-20T09:00:00Z",
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-05-01T09:15:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "sent",
+          "created_at": "2026-05-01T09:20:00Z",
+          "emails": [
+            "hello@brightleaf.design"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "marked_as_paid",
+          "created_at": "2026-05-18T12:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000003"
+        },
+        {
+          "activity_type": "accounting_synced",
+          "created_at": "2026-05-20T09:00:00Z",
+          "emails": [],
+          "user_id": null
+        }
+      ],
+      "created_at": "2026-05-01T09:15:00Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000002"
+      },
+      "date": "2026-05-01",
+      "discount_rate": 0,
+      "due_date": "2026-06-01",
+      "file_id": "50000000-0000-4000-8000-000000000023",
+      "id": "70000000-0000-4000-8000-000000000004",
+      "invoice_number": "INV-2026-0040",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "Brand workshop",
+          "quantity": 2,
+          "tax_rate": 8.5,
+          "total": {
+            "amount": 40000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 20000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": null,
+      "payments": [
+        {
+          "external_method": "check",
+          "paid_at": "2026-05-18",
+          "transaction_id": null,
+          "type": "external"
+        }
+      ],
+      "status": "paid",
+      "tax_rate": 8.5,
+      "total": {
+        "amount": 43400,
+        "currency": "USD"
+      },
+      "updated_at": "2026-05-20T09:00:00Z"
+    },
+    {
+      "accounting_sync_status": "synced",
+      "accounting_synced_at": "2026-06-21T20:00:00Z",
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-01-16T14:32:07Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "sent",
+          "created_at": "2026-01-16T15:00:00Z",
+          "emails": [
+            "info@acmesupplies.com",
+            "ap@acmesupplies.com"
+          ],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "downloaded",
+          "created_at": "2026-01-17T09:12:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000003"
+        },
+        {
+          "activity_type": "matched",
+          "created_at": "2026-06-21T19:37:23Z",
+          "emails": [],
+          "user_id": null
+        },
+        {
+          "activity_type": "marked_as_paid",
+          "created_at": "2026-06-21T19:38:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000003"
+        },
+        {
+          "activity_type": "accounting_synced",
+          "created_at": "2026-06-21T20:00:00Z",
+          "emails": [],
+          "user_id": null
+        }
+      ],
+      "created_at": "2026-01-16T14:32:07Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000001"
+      },
+      "date": "2026-01-16",
+      "discount_rate": 0,
+      "due_date": "2026-02-15",
+      "file_id": "50000000-0000-4000-8000-000000000020",
+      "id": "70000000-0000-4000-8000-000000000001",
+      "invoice_number": "INV-2026-0002",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "Consulting Services - January",
+          "quantity": 1,
+          "tax_rate": 10,
+          "total": {
+            "amount": 90000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 90000,
+            "currency": "USD"
+          }
+        },
+        {
+          "discount_rate": 0,
+          "name": "Travel reimbursement",
+          "quantity": 1,
+          "tax_rate": 0,
+          "total": {
+            "amount": 9403,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 9403,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": "Net 30 terms apply.",
+      "payments": [
+        {
+          "external_method": null,
+          "paid_at": "2026-06-21",
+          "transaction_id": "019eebb0-0938-7000-8000-00000000000b",
+          "type": "received_in_account"
+        }
+      ],
+      "status": "paid",
+      "tax_rate": 10,
+      "total": {
+        "amount": 108403,
+        "currency": "USD"
+      },
+      "updated_at": "2026-06-21T20:00:00Z"
+    },
+    {
+      "accounting_sync_status": "synced",
+      "accounting_synced_at": "2026-01-20T10:00:00Z",
+      "activities": [
+        {
+          "activity_type": "created",
+          "created_at": "2026-01-15T10:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000001"
+        },
+        {
+          "activity_type": "marked_as_paid",
+          "created_at": "2026-01-20T10:00:00Z",
+          "emails": [],
+          "user_id": "40000000-0000-4000-8000-000000000003"
+        },
+        {
+          "activity_type": "accounting_synced",
+          "created_at": "2026-01-20T10:00:00Z",
+          "emails": [],
+          "user_id": null
+        }
+      ],
+      "created_at": "2026-01-15T10:00:00Z",
+      "customer": {
+        "id": "60000000-0000-4000-8000-000000000008"
+      },
+      "date": "2026-01-15",
+      "discount_rate": 0,
+      "due_date": "2026-02-01",
+      "id": "70000000-0000-4000-8000-000000000012",
+      "invoice_number": "INV-2026-0001",
+      "line_items": [
+        {
+          "discount_rate": 0,
+          "name": "Close-out fee",
+          "quantity": 1,
+          "tax_rate": null,
+          "total": {
+            "amount": 5000,
+            "currency": "USD"
+          },
+          "unit_price": {
+            "amount": 5000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "note": "Final invoice before deletion.",
+      "payments": [
+        {
+          "external_method": "cash",
+          "paid_at": "2026-01-20",
+          "transaction_id": null,
+          "type": "external"
+        }
+      ],
+      "status": "paid",
+      "tax_rate": 0,
+      "total": {
+        "amount": 5000,
+        "currency": "USD"
+      },
+      "updated_at": "2026-01-20T10:00:00Z"
+    }
+  ]
+}
