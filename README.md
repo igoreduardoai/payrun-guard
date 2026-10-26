@@ -52,19 +52,35 @@ npm test                 # unit tests (node:test)
 npm run typecheck
 npm run run:plan         # plan from fixtures; add -- --live to read the Rho sandbox
 npm run fixtures         # refresh fixtures from the Rho sandbox
-npm run web              # approval UI skeleton on http://localhost:3000 (simulated payments)
+npm run web              # older minimal Node UI (apps/web) on http://localhost:3000
+cd web && npm install && npm run dev   # main Next.js dashboard on http://localhost:3000
 npm run db:apply         # apply SQL migrations (needs SUPABASE_ACCESS_TOKEN + SUPABASE_PROJECT_REF)
 npm run db:smoke         # live Supabase round trip (needs SUPABASE_URL + SUPABASE_SECRET_KEY)
 npm run db:verify        # live schema/RLS/constraint checks (also needs SUPABASE_PUBLISHABLE_KEY)
 ```
 Copy `.env.example` to `.env` for options. Never commit real tokens.
 
+## Web dashboard (web/)
+
+Next.js 16 App Router + Tailwind. The layout was first generated with v0.app this week, then every number was wired to the real engine. There is no mock data.
+
+- `web/lib/server/engine.ts` (server-only) loads the Rho sandbox snapshot from `fixtures/`, runs `planRun`, and records the run through `PayRunService`.
+- API routes: `GET /api/run`, `GET /api/audit`, `POST /api/approve` (human approves the safe bills, then simulated pay with signed tokens; a repeat returns the existing payments), and `POST /api/agent-pay {billId}` (an agent pays with no token and gets 403 plus the gate's reason: `preflight_failed`, `held_by_plan`, `no_approval`, ...).
+- Every payment is **SIMULATED** (amber badge). No money moves.
+- Store: in-memory (offline fixtures) unless `SUPABASE_URL` and a server-side secret key are set. `STORE=memory` forces offline. In memory mode the state is per server instance and resets on cold start.
+- The Supabase secret key is only ever read server-side. Never prefix it with `NEXT_PUBLIC_`.
+
+### Deploy to Vercel (public demo = offline fixtures)
+1. Import `igoreduardoai/payrun-guard`, then set **Root Directory** to `web`. Keep "Include files outside the root directory" on, because the UI imports `../packages` and `../fixtures`.
+2. Framework: Next.js (auto). Install: `npm install`. Build: `next build`. Node 20.x or later.
+3. Env: `STORE=memory` (recommended) and optionally `APPROVAL_SECRET` (random string). Do **not** set Supabase keys on the public deployment.
+
 ## Architecture
 ```
 Rho API (sandbox, read-only) ──> packages/rho (client + pagination) ──> snapshot
 snapshot ──> packages/preflight (deterministic rules, evidence) ──> packages/planner (week window, cash floor)
 agent ──(tools: get_run, preflight_payment, request_approval, pay)──> packages/rails/guardedPay
-human ──(approve in apps/web; signs token)──────────────────────────> guardedPay ──> PaymentRail
+human ──(approve in web/; signs token)──────────────────────────────> guardedPay ──> PaymentRail
 PaymentRail = SimulatedRail (today) | RhoSdkRail (when Rho early-access SDK is connected)
 ```
 
