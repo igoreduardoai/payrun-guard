@@ -23,5 +23,7 @@ export interface PaymentRail {
   readonly name: string;
   readonly simulated: boolean;
   pay(req: PaymentRequest): Promise<PaymentRecord>;
+  /** Optional: also report whether a new payment was created (false = idempotent replay). */
+  payDetailed?(req: PaymentRequest): Promise<{ record: PaymentRecord; created: boolean }>;
   list(): Promise<PaymentRecord[]>;
 }

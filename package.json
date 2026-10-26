@@ -11,7 +11,9 @@
     "typecheck": "tsc --noEmit",
     "fixtures": "tsx scripts/fixtures.ts",
     "run:plan": "tsx scripts/run-plan.ts",
-    "web": "tsx apps/web/server.ts"
+    "web": "tsx apps/web/server.ts",
+    "db:apply": "tsx scripts/apply-migrations.ts",
+    "db:smoke": "tsx scripts/supabase-smoke.ts"
   },
   "devDependencies": {
     "@types/node": "20.19.43",

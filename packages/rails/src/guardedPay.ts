@@ -19,6 +19,10 @@ export interface GuardedPayInput {
 }
 
 export async function guardedPay(rail: PaymentRail, input: GuardedPayInput, approvalSecret: string, now = new Date()): Promise<PaymentRecord> {
+  return (await guardedPayDetailed(rail, input, approvalSecret, now)).record;
+}
+
+export async function guardedPayDetailed(rail: PaymentRail, input: GuardedPayInput, approvalSecret: string, now = new Date()): Promise<{ record: PaymentRecord; created: boolean }> {
   const planned = input.run.bills.find((b) => b.billId === input.billId);
   if (!planned) throw new GateRefusal("not_in_run", `bill ${input.billId} is not part of run ${input.run.runId}`);
   if (!planned.pass) throw new GateRefusal("preflight_failed", `pre-flight failed: ${planned.holdReasons.join(", ")}`);
@@ -38,9 +42,11 @@ export async function guardedPay(rail: PaymentRail, input: GuardedPayInput, appr
   const method = vendor?.payment_methods.find((m) => m.is_default) ?? vendor?.payment_methods[0];
   if (!vendor || !method) throw new GateRefusal("no_payment_method", "vendor payment method missing");
 
-  return rail.pay({
+  const req = {
     idempotencyKey: `${input.run.runId}:${input.billId}`,
     runId: input.run.runId, billId: input.billId, counterpartyId: vendor.id, paymentMethodId: method.id,
     sourceAccountId: input.run.sourceAccountId, amountCents: planned.amountCents, currency: planned.currency,
-  });
+  };
+  if (rail.payDetailed) return rail.payDetailed(req);
+  return { record: await rail.pay(req), created: true };
 }

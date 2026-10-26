@@ -36,6 +36,13 @@ Each finding cites Rho object ids and field values as evidence.
 3. A human approval token (HMAC, signed only by the human-facing approval process; the agent never holds the secret) matches this run, bill, amount, currency and `checkHash`, and hasn't expired.
 Payments are idempotent: the same key, or the same bill in the same run, returns the existing payment. A double click pays once.
 
+## Storage (Supabase, with offline fallback)
+`STORE=memory` (default) keeps everything in process, so the Hack Fair demo works offline from fixtures. `STORE=supabase` persists to Supabase over HTTPS:
+- `payrun_runs`, `payrun_bill_checks` (pass/hold, reasons, findings, check hash), `payrun_approvals` (**SHA-256 of the token only**), `payrun_payments` (`idempotency_key` unique **and** one payment per bill per run), `payrun_audit_log` (append-only; refusals are logged too).
+- Row-level security is on for every table. The public/anon key gets no grants; the server writes with the secret key; signed-in users can only read rows for their org.
+- Schema: `supabase/migrations/`. Apply with `npm run db:apply` (Management API over HTTPS), the dashboard SQL editor, or `supabase db push`.
+- Every payment call re-checks the persisted bill check; a run object that was altered after planning is refused.
+
 ## Quick start
 ```bash
 npm install
@@ -44,6 +51,8 @@ npm run typecheck
 npm run run:plan         # plan from fixtures; add -- --live to read the Rho sandbox
 npm run fixtures         # refresh fixtures from the Rho sandbox
 npm run web              # approval UI skeleton on http://localhost:3000 (simulated payments)
+npm run db:apply         # apply SQL migrations (needs SUPABASE_ACCESS_TOKEN + SUPABASE_PROJECT_REF)
+npm run db:smoke         # live Supabase check (needs STORE=supabase + SUPABASE_SECRET_KEY)
 ```
 Copy `.env.example` to `.env` for options. Never commit real tokens.
 
@@ -61,7 +70,7 @@ Rho Bill Pay already runs duplicate checks, approval routing and flags missing v
 
 ## Known limitations / next steps
 - Simulated rail only; connect Rho early-access SDK if access is granted.
-- No persistence yet (in-memory ledger); Supabase tables planned.
+- Supabase persistence is implemented and unit-tested against a fake Data API; live run pending migration + server key.
 - LLM explainer and agent loop not wired yet; MCP server planned.
 - Expected inflows from open invoices are reported but not counted (conservative).
 - W-9 rule skips non-US vendors (W-8 forms are not visible in the API).
