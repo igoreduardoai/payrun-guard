@@ -4,9 +4,10 @@ import { randomBytes } from "node:crypto";
 import { loadSnapshot } from "../../packages/rho/src/client.ts";
 import { planRun } from "../../packages/planner/src/cashPlan.ts";
 import { GateRefusal } from "../../packages/rails/src/guardedPay.ts";
-import { storeFromEnv } from "../../packages/store/src/index.ts";
+import { storeFromEnvWithFallback } from "../../packages/store/src/index.ts";
 import { PayRunService } from "../../packages/store/src/PayRunService.ts";
 
+try { process.loadEnvFile(); } catch { /* no .env: offline defaults */ }
 const PORT = Number(process.env.PORT ?? 3000);
 // The approval secret lives only in this human-facing process. If unset, a random one is generated per run (never printed).
 const SECRET = process.env.APPROVAL_SECRET && process.env.APPROVAL_SECRET.length >= 16 ? process.env.APPROVAL_SECRET : randomBytes(32).toString("hex");
@@ -16,7 +17,7 @@ const run = planRun(snap, {
   sourceAccountId: process.env.SOURCE_ACCOUNT_ID ?? "30000000-0000-4000-8000-000000000006",
   cashFloorCents: Number(process.env.CASH_FLOOR_CENTS ?? 250000),
 });
-const { store, note } = storeFromEnv();
+const { store, note } = await storeFromEnvWithFallback();
 const svc = new PayRunService(store, SECRET, snap.counterparties);
 await svc.recordRun(run, "fixtures");
 const rail = svc.rail;

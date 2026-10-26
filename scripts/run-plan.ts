@@ -1,6 +1,7 @@
 // Print this week's payment run. Usage: tsx scripts/run-plan.ts [--as-of YYYY-MM-DD] [--account <id>] [--floor-cents N] [--live]
 import { loadSnapshot, RhoClient } from "../packages/rho/src/client.ts";
 import { planRun } from "../packages/planner/src/cashPlan.ts";
+try { process.loadEnvFile(); } catch { /* no .env */ }
 
 const arg = (k: string) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : undefined; };
 const live = process.argv.includes("--live");

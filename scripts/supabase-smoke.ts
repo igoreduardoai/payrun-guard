@@ -3,6 +3,7 @@ import { loadSnapshot } from "../packages/rho/src/client.ts";
 import { planRun } from "../packages/planner/src/cashPlan.ts";
 import { storeFromEnv } from "../packages/store/src/index.ts";
 import { PayRunService } from "../packages/store/src/PayRunService.ts";
+try { process.loadEnvFile(); } catch { /* no .env */ }
 
 const { store, note } = storeFromEnv();
 if (store.kind !== "supabase") { console.error(`not using supabase: ${note}`); process.exit(1); }

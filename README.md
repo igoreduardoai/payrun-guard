@@ -37,11 +37,13 @@ Each finding cites Rho object ids and field values as evidence.
 Payments are idempotent: the same key, or the same bill in the same run, returns the existing payment. A double click pays once.
 
 ## Storage (Supabase, with offline fallback)
-`STORE=memory` (default) keeps everything in process, so the Hack Fair demo works offline from fixtures. `STORE=supabase` persists to Supabase over HTTPS:
+When `SUPABASE_URL` + `SUPABASE_SECRET_KEY` are set and Supabase answers, the app persists to Supabase over HTTPS; otherwise (or with `STORE=memory`) it runs fully offline from fixtures (Hack Fair fallback):
 - `payrun_runs`, `payrun_bill_checks` (pass/hold, reasons, findings, check hash), `payrun_approvals` (**SHA-256 of the token only**), `payrun_payments` (`idempotency_key` unique **and** one payment per bill per run), `payrun_audit_log` (append-only; refusals are logged too).
 - Row-level security is on for every table. The public/anon key gets no grants; the server writes with the secret key; signed-in users can only read rows for their org.
 - Schema: `supabase/migrations/`. Apply with `npm run db:apply` (Management API over HTTPS), the dashboard SQL editor, or `supabase db push`.
 - Every payment call re-checks the persisted bill check; a run object that was altered after planning is refused.
+- Live verification (`npm run db:verify`, 2026-10-26): 27/27 checks passed on the live project: tables exist; the publishable key is denied read and write (42501); a second payment for the same bill/run and a reused idempotency key are rejected (23505); zero amounts and `pay` without `pass` are rejected (23514); payments/approvals for unchecked bills are rejected (23503); UPDATE/DELETE on the audit log and payments are refused (P0001 append-only trigger); approvals hold only 64-hex SHA-256 hashes.
+- Open item: `supabase/migrations/20261026230000_harden_privileges.sql` (proposed, not yet applied) removes extra privileges the service role inherits from Supabase defaults and blocks TRUNCATE on the audit log and payments. `supabase/verify/verify_schema.sql` is a read-only query set for the SQL editor (RLS flags, policies, triggers, grants).
 
 ## Quick start
 ```bash
@@ -52,7 +54,8 @@ npm run run:plan         # plan from fixtures; add -- --live to read the Rho san
 npm run fixtures         # refresh fixtures from the Rho sandbox
 npm run web              # approval UI skeleton on http://localhost:3000 (simulated payments)
 npm run db:apply         # apply SQL migrations (needs SUPABASE_ACCESS_TOKEN + SUPABASE_PROJECT_REF)
-npm run db:smoke         # live Supabase check (needs STORE=supabase + SUPABASE_SECRET_KEY)
+npm run db:smoke         # live Supabase round trip (needs SUPABASE_URL + SUPABASE_SECRET_KEY)
+npm run db:verify        # live schema/RLS/constraint checks (also needs SUPABASE_PUBLISHABLE_KEY)
 ```
 Copy `.env.example` to `.env` for options. Never commit real tokens.
 
@@ -70,7 +73,7 @@ Rho Bill Pay already runs duplicate checks, approval routing and flags missing v
 
 ## Known limitations / next steps
 - Simulated rail only; connect Rho early-access SDK if access is granted.
-- Supabase persistence is implemented and unit-tested against a fake Data API; live run pending migration + server key.
+- Hardening migration (privileges + TRUNCATE guard) proposed, not applied.
 - LLM explainer and agent loop not wired yet; MCP server planned.
 - Expected inflows from open invoices are reported but not counted (conservative).
 - W-9 rule skips non-US vendors (W-8 forms are not visible in the API).

@@ -7,7 +7,7 @@ import { loadFixture, PRIMARY_CHECKING } from "../../testutil/fixtures.ts";
 import { MemoryStore } from "../src/MemoryStore.ts";
 import { PayRunService } from "../src/PayRunService.ts";
 import { StoreConstraintError } from "../src/Store.ts";
-import { storeFromEnv } from "../src/index.ts";
+import { storeFromEnv, storeFromEnvWithFallback } from "../src/index.ts";
 
 const SECRET = "test-secret-not-real-0123456789";
 const snap = loadFixture();
@@ -97,10 +97,23 @@ test("memory store mirrors SQL constraints", async () => {
     amountCents: 1, currency: "USD", paymentId: "p", status: "submitted", simulated: true, rail: "simulated", createdAt: "" }), StoreConstraintError);
 });
 
-test("storeFromEnv: offline by default; publishable key never used for writes", () => {
+test("storeFromEnv: Supabase by default when configured; memory otherwise; publishable key never used", () => {
   assert.equal(storeFromEnv({}).store.kind, "memory");
-  const r = storeFromEnv({ STORE: "supabase", SUPABASE_URL: "https://x.supabase.co", SUPABASE_SECRET_KEY: "sb_publishable_abc" });
+  assert.equal(storeFromEnv({ SUPABASE_URL: "https://x.supabase.co", SUPABASE_SECRET_KEY: "sb_secret_test" }).store.kind, "supabase");
+  assert.equal(storeFromEnv({ STORE: "memory", SUPABASE_URL: "https://x.supabase.co", SUPABASE_SECRET_KEY: "sb_secret_test" }).store.kind, "memory");
+  const r = storeFromEnv({ SUPABASE_URL: "https://x.supabase.co", SUPABASE_SECRET_KEY: "sb_publishable_abc" });
   assert.equal(r.store.kind, "memory");
-  assert.match(r.note, /missing/);
-  assert.equal(storeFromEnv({ STORE: "supabase", SUPABASE_URL: "https://x.supabase.co", SUPABASE_SECRET_KEY: "sb_secret_test" }).store.kind, "supabase");
+  assert.equal(storeFromEnv({ STORE: "supabase" }).note.includes("missing"), true);
+});
+
+test("storeFromEnvWithFallback: unreachable or 401 Supabase falls back to memory without leaking the key", async () => {
+  const env = { SUPABASE_URL: "https://x.supabase.co", SUPABASE_SECRET_KEY: "sb_secret_DO_NOT_LEAK" };
+  const down = await storeFromEnvWithFallback(env, (async () => { throw new Error("getaddrinfo ENOTFOUND"); }) as typeof fetch);
+  assert.equal(down.store.kind, "memory");
+  const unauth = await storeFromEnvWithFallback(env, (async () => new Response(JSON.stringify({ message: "Invalid API key" }), { status: 401 })) as typeof fetch);
+  assert.equal(unauth.store.kind, "memory");
+  assert.match(unauth.note, /401/);
+  assert.ok(!unauth.note.includes("DO_NOT_LEAK"));
+  const up = await storeFromEnvWithFallback(env, (async () => new Response("[]", { status: 200 })) as typeof fetch);
+  assert.equal(up.store.kind, "supabase");
 });

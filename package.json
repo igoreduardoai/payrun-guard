@@ -13,7 +13,8 @@
     "run:plan": "tsx scripts/run-plan.ts",
     "web": "tsx apps/web/server.ts",
     "db:apply": "tsx scripts/apply-migrations.ts",
-    "db:smoke": "tsx scripts/supabase-smoke.ts"
+    "db:smoke": "tsx scripts/supabase-smoke.ts",
+    "db:verify": "tsx scripts/verify-live.ts"
   },
   "devDependencies": {
     "@types/node": "20.19.43",
