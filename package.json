@@ -5,7 +5,9 @@
   "description": "The safety check every AI agent must pass before paying bills on Rho.",
   "license": "MIT",
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "test": "node --import tsx --test packages/*/test/*.test.ts",
     "typecheck": "tsc --noEmit",
@@ -14,7 +16,8 @@
     "web": "tsx apps/web/server.ts",
     "db:apply": "tsx scripts/apply-migrations.ts",
     "db:smoke": "tsx scripts/supabase-smoke.ts",
-    "db:verify": "tsx scripts/verify-live.ts"
+    "db:verify": "tsx scripts/verify-live.ts",
+    "agent": "tsx scripts/agent-run.ts"
   },
   "devDependencies": {
     "@types/node": "20.19.43",
