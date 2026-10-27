@@ -66,13 +66,13 @@ export async function runAgent(run: PayRun, svc: PayRunService, planner: Planner
   let plannerSummary = "";
   let error: string | undefined;
   let turn = 0;
-  let nudges = 1;
+  let nudges = 3; // the completion check may re-prompt the planner up to 3 times
 
   for (; turn < (opts.maxTurns ?? 12); turn++) {
     let out;
     try { out = await planner.next(obs); } catch (e) { status = "planner_error"; error = (e as Error).message; break; }
     if (out.kind === "finish") {
-      // completion check: human-approved bills that were never paid -> tell the planner once and continue
+      // completion check: human-approved bills that were never paid -> tell the planner (up to 3 times) and continue
       const paidNow = new Set((await svc.store.listPayments(run.runId)).map((p) => p.billId));
       const pending = [...box.approved].filter((b) => !paidNow.has(b));
       if (pending.length && planner.feedback && nudges-- > 0) {

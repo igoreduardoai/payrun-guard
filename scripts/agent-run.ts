@@ -54,6 +54,7 @@ for (const s of report.trace) {
   console.log(`turn ${s.turn}  ${s.tool}(${JSON.stringify(s.args).slice(0, 80)})  verify:${s.preVerify}${s.postVerify ? ` post:${s.postVerify}` : ""}  -> ${brief}`);
 }
 console.log(`\nStatus: ${report.status}${report.error ? ` (${report.error})` : ""} · turns ${report.turns}`);
+if (report.approvedUnpaid.length) console.log(`WARNING: approved by the human but not paid: ${report.approvedUnpaid.join(", ")}`);
 console.log(`Summary [${report.summarySource}]: ${report.summary}`);
 if (report.summaryRejected) console.log(`Rejected planner summary (invented numbers): ${report.summaryRejected.join(", ")}`);
 console.log(`\nBaseline without the gate: a naive agent would make ${base.naivePayments} payments, ${base.naiveImproper} of them improper (${usd(base.naiveImproperCents)}). With PayRun Guard: ${report.paid.length} paid, ${report.paid.filter((p) => run.bills.find((b) => b.billId === p.billId)?.decision !== "pay").length} improper.`);
